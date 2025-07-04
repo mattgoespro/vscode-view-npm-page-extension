@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "github.copilot-chat",
+    "dbaeumer.vscode-eslint",
+    "herrmannplatz.npm-dependency-links",
+    "mskelton.npm-outdated",
+    "christian-kohler.npm-intellisense",
+    "fabiospampinato.vscode-open-in-npm",
+    "usernamehw.errorlens",
+    "felipecaputo.git-project-manager",
+    "esbenp.prettier-vscode",
+    "richie5um2.vscode-sort-json",
+    "formulahendry.auto-rename-tag",
+    "meganrogge.template-string-converter",
+    "mrmlnc.vscode-scss",
+    "amodio.tsl-problem-matcher",
+    "yoavbls.pretty-ts-errors",
+    "markosth09.color-picker",
+    "dnut.rewrap-revived",
+    "oouo-diogo-perdigao.docthis",
+    "github.copilot",
+    "helgardrichard.helium-icon-theme"
+  ]
+}

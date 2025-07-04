@@ -1,0 +1,58 @@
+{
+  "name": "vscode-open-in-npm",
+  "displayName": "Open in npmjs.org",
+  "description": "Adds a context menu item to open imported packages in npmjs.org",
+  "version": "0.0.1",
+  "main": "./dist/extension.js",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "publish": "vsce publish",
+    "build": "webpack --config webpack.config.ts --mode production",
+    "watch": "webpack --config webpack.config.ts --mode development --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "@types/vscode": "^1.70.0",
+    "bun": "^1.2.18",
+    "esbuild": "^0.25.5",
+    "esbuild-loader": "^4.3.0",
+    "eslint": "^9.29.0",
+    "fork-ts-checker-webpack-plugin": "^9.1.0",
+    "prettier": "^3.5.3",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.7.4",
+    "typescript-eslint": "^8.34.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "activationEvents": [
+    "onLanguage:typescript"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.openInNpm",
+        "title": "Open in npmjs.org"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.openInNpm",
+          "when": "editorLangId == typescript",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "open": "^10.1.2"
+  }
+}

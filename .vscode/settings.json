@@ -1,0 +1,99 @@
+{
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "css.format.enable": false,
+  "css.validate": false,
+  "debug.toolBarLocation": "commandCenter",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always"
+  },
+  "editor.comments.insertSpace": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.enable": true,
+  "eslint.format.enable": false,
+  "eslint.probe": ["javascript", "typescript", "typescriptreact", "html"],
+  "eslint.run": "onType",
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["javascript", "typescript", "typescriptreact", "html"],
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    ".git": true,
+    "node_modules": true
+  },
+  "html.format.enable": false,
+  "javascript.format.enable": false,
+  "javascript.suggestionActions.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "less.validate": false,
+  "npm-outdated.majorUpdateProtection": false,
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.reformat": true,
+  "rewrap.wrappingColumn": 120,
+  "scss.lint.emptyRules": "warning",
+  "scss.lint.zeroUnits": "warning",
+  "scss.scannerExclude": ["**/.git", "**/bower_components"],
+  "scss.showErrors": true,
+  "scss.validate": false,
+  "search.exclude": {
+    "**/dist/**": true,
+    "**/node_modules/**": true,
+    "*.json": true,
+    "*.md": true,
+    "*.mjs": true,
+    ".git": true,
+    ".gitignore": true,
+    ".vscode": true,
+    ".vscodeignore": true,
+    "LICENSE": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "tsconfig.json": true,
+    "webpack.config.ts": true
+  },
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "scss"],
+  "terminal.integrated.automationProfile.windows": {
+    "args": ["-l"],
+    "env": {
+      "PATH": "${workspaceFolder}\\node_modules\\.bin;${env:PATH}",
+      "TIMING": "1"
+    },
+    "icon": "terminal-bash",
+    "overrideName": true,
+    "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+  },
+  "terminal.integrated.defaultProfile.windows": "bash-node",
+  "terminal.integrated.profiles.windows": {
+    "bash-node": {
+      "args": ["-l"],
+      "env": {
+        "PATH": "${workspaceFolder}\\node_modules\\.bin;${env:PATH}",
+        "TIMING": "1"
+      },
+      "icon": "terminal-bash",
+      "overrideName": true,
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    }
+  },
+  "typescript.format.enable": false,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.tsc.autoDetect": "off",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.iconTheme": "helium-icon-theme"
+}
