@@ -71,7 +71,6 @@
     "args": ["-l"],
     "env": {
       "PATH": "${workspaceFolder}\\node_modules\\.bin;${env:PATH}",
-      "TIMING": "1"
     },
     "icon": "terminal-bash",
     "overrideName": true,
@@ -83,7 +82,6 @@
       "args": ["-l"],
       "env": {
         "PATH": "${workspaceFolder}\\node_modules\\.bin;${env:PATH}",
-        "TIMING": "1"
       },
       "icon": "terminal-bash",
       "overrideName": true,

@@ -2,11 +2,15 @@
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "module": "node16",
+    "module": "esnext",
     "target": "es2022",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "lib": ["es2022"],
     "types": ["node"],
     "sourceMap": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "skipLibCheck": true
   }
 }

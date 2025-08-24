@@ -1,12 +1,14 @@
 {
-  "name": "vscode-open-in-npm",
-  "displayName": "Open in npmjs.org",
-  "description": "Adds a context menu item to open imported packages in npmjs.org",
+  "publisher": "mattgoespro",
+  "name": "vscode-view-npm-page-extension",
+  "displayName": "View NPM Page",
+  "description": "View npm packages in npmjs.org directly from the editor.",
   "version": "0.0.1",
-  "main": "./dist/extension.js",
-  "engines": {
-    "vscode": "^1.70.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattgoespro/vscode-view-npm-page-extension.git"
   },
+  "main": "./dist/extension.js",
   "categories": [
     "Other"
   ],
@@ -16,43 +18,58 @@
     "build": "webpack --config webpack.config.ts --mode production",
     "watch": "webpack --config webpack.config.ts --mode development --watch"
   },
+  "dependencies": {
+    "fs-extra": "^11.3.1",
+    "open": "^10.2.0"
+  },
   "devDependencies": {
-    "@types/node": "^24.0.1",
-    "@types/vscode": "^1.70.0",
-    "bun": "^1.2.18",
-    "esbuild": "^0.25.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.3.0",
+    "@types/vscode": "^1.103.0",
+    "esbuild": "^0.25.9",
     "esbuild-loader": "^4.3.0",
-    "eslint": "^9.29.0",
+    "eslint": "^9.34.0",
     "fork-ts-checker-webpack-plugin": "^9.1.0",
-    "prettier": "^3.5.3",
-    "ts-loader": "^9.5.2",
+    "prettier": "^3.6.2",
+    "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
-    "typescript": "^4.7.4",
-    "typescript-eslint": "^8.34.0",
-    "webpack": "^5.99.9",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.41.0",
+    "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1"
   },
   "activationEvents": [
+    "onLanguage:javascript",
     "onLanguage:typescript"
   ],
   "contributes": {
+    "configuration": {
+      "properties": {
+        "openInNpm.browserExecutablePath": {
+          "type": "string",
+          "description": "Path to the browser executable that the page will be opened in. Defaults to empty when the OS default browser should be used.",
+          "default": "",
+          "title": "Browser Executable Path"
+        }
+      }
+    },
     "commands": [
       {
         "command": "extension.openInNpm",
-        "title": "Open in npmjs.org"
+        "title": "Open the target module import in the browser."
       }
     ],
     "menus": {
       "editor/context": [
         {
           "command": "extension.openInNpm",
-          "when": "editorLangId == typescript",
+          "when": "editorLangId == javascript || editorLangId == typescript",
           "group": "navigation"
         }
       ]
     }
   },
-  "dependencies": {
-    "open": "^10.1.2"
+  "engines": {
+    "vscode": "^1.103.0"
   }
 }

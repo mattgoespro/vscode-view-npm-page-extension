@@ -2,10 +2,12 @@ import path from "path";
 import { Configuration } from "webpack";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
+const __dirname = path.resolve();
+
 export default {
   target: "node",
   mode: "none",
-  devtool: "nosources-source-map",
+  devtool: "eval-source-map",
   entry: "./src/extension.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
